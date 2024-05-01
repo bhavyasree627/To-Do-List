@@ -3,10 +3,6 @@ const mongoose = require('mongoose');
 const TaskSchema = require('./model');
 const cors = require('cors');
 
-mongoose.connect("mongodb+srv://bhavya627:bhavya627@cluster0.9lczmvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(
-    ()=>console.log("DB Connected")
-);
-
 const app = express();
 app.use(cors({
     origin:"*"
