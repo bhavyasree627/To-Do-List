@@ -43,4 +43,4 @@ app.delete('/delete/:id', async (req, res) => {
     }
 })
 
-app.listen(5000,()=> console.log("Server running...."));
+app.listen(5000,()=> console.log("Server running"));
