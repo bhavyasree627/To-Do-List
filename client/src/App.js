@@ -7,21 +7,21 @@ const App = () => {
   const [newtask, setNewtask] = useState('');
 
   useEffect(() => {
-    axios.get("http://18.224.151.129/gettask").then(
+    axios.get("http://18.224.151.129:5000/gettask").then(
       arr => setItem(arr.data)
     )
   }, []);
 
   const submitHandler = e => {
     e.preventDefault();
-    axios.post("http://18.224.151.129/addtask", { todo: newtask }).then(
+    axios.post("http://18.224.151.129:5000/addtask", { todo: newtask }).then(
       arr => setItem(arr.data)
     )
     setNewtask(''); // Clear input field after submission
   }
 
   const deleteHandler = id => {
-    axios.delete(`http://18.224.151.129/delete/${id}`).then(
+    axios.delete(`http://18.224.151.129:5000/delete/${id}`).then(
       arr => setItem(arr.data)
     )
   }
