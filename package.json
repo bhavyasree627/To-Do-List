@@ -4,10 +4,10 @@
   "description": "testing application",
   "main": "server.js",
  "scripts": {
-  "start": "node server.js",  // Make sure your main server file is 'server.js'
+  "start": "node server.js", 
   "server": "nodemon server.js",
-  "client": "npm run start --prefix client",  // Use `run start` for clarity
-  "dev": "concurrently \"npm run server\" \"npm run client\""  // Consistent usage of `npm run`
+  "client": "npm run start --prefix client",  
+  "dev": "concurrently \"npm run server\" \"npm run client\"" 
 },
   "author": "Bhavya",
   "license": "ISC",
