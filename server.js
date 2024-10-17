@@ -11,6 +11,7 @@ app.use(express.json());
 app.get('/', (req, res) => { 
     res.send("Hello World");
 });
+mongoose.connect('mongodb+srv://kiran:kiran@todolist.von05st.mongodb.net/?retryWrites=true&w=majority&appName=todolist').then(() => console.log('DB connected'));
 
 app.post('/addtask', async (req, res) => {
     const {todo} = req.body;
