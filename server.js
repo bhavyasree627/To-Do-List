@@ -11,6 +11,15 @@ app.use(express.json());
 app.get('/', (req, res) => { 
     res.send("Hello World");
 });
+
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 mongoose.connect('mongodb+srv://bhavya627:bhavya627@cluster0.9lczmvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log('DB connected'));
 
 app.post('/addtask', async (req, res) => {
